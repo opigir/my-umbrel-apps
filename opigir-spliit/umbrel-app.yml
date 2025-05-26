@@ -5,6 +5,7 @@ category: finance
 name: Spliit
 version: "1.0.0"
 tagline: Share expenses with friends and family
+icon: https://raw.githubusercontent.com/spliit-app/spliit/refs/heads/main/src/app/icon.svg
 description: >-
   Spliit is a free and open-source alternative to Splitwise. Create groups, add expenses, and keep track of who owes what.
   
@@ -27,9 +28,9 @@ repo: https://github.com/spliit-app/spliit
 support: https://github.com/spliit-app/spliit/discussions
 port: 3000
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-spliit/1.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-spliit/2.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-spliit/3.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
