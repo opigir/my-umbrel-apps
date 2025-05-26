@@ -1,3 +1,4 @@
+# umbrel-app.yml
 manifestVersion: 1.1
 id: opigir-spliit
 category: finance
@@ -7,29 +8,18 @@ tagline: Share expenses with friends and family
 description: >-
   Spliit is a free and open-source alternative to Splitwise. Create groups, add expenses, and keep track of who owes what.
   
-  
   Features:
   
   • Create groups and share them with friends
   
   • Add expenses with descriptions and categories
   
-  • Split expenses evenly or unevenly by percentage, shares, or amount
+  • Track payments and balances in real time
   
-  • View group balances and optimize money transfers
+  • Multi-currency support
   
-  • Progressive Web App support
-  
-  • No account required - just share the group link
-  
-  • Upload receipt images (stored locally on your Umbrel)
-  
-  • No external S3 setup required - everything stored on your node
-releaseNotes: >-
-  First release of Spliit for Umbrel. This expense sharing app lets you track and split bills with friends and family without requiring accounts.
-  
-  
-  Receipt uploads are enabled and files are stored locally on your Umbrel node. No external cloud storage required!
+  • Export to CSV or PDF
+
 developer: Spliit Team
 website: https://spliit.app
 dependencies: []
