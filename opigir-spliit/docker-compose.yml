@@ -10,16 +10,15 @@ services:
     image: crazymax/spliit:latest
     restart: on-failure
     stop_grace_period: 1m
+    depends_on:
+      - db
     environment:
       TZ: UTC
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
-      POSTGRES_USER: spliit
       POSTGRES_DB: spliit
-      POSTGRES_TIMEOUT: 60
-      DATABASE_URL: postgresql://spliit@db:5432/spliit
-    depends_on:
-      - db
+      POSTGRES_USER: spliit
+      POSTGRES_PASSWORD: UmbrelSpliit2025!
 
   db:
     image: postgres:15-alpine
@@ -28,6 +27,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: spliit
+      TZ: UTC
       POSTGRES_DB: spliit
-      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: spliit
+      POSTGRES_PASSWORD: UmbrelSpliit2025!
