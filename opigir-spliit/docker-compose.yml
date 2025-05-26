@@ -1,9 +1,7 @@
-# docker-compose.yml
 version: "3.7"
 
 services:
   app_proxy:
-    # Umbrel’s built-in reverse proxy will pick this up
     environment:
       APP_HOST: opigir-spliit_web_1
       APP_PORT: 3000
@@ -17,8 +15,14 @@ services:
         condition: service_healthy
     environment:
       TZ: UTC
-      # Prisma/Next.js will pick this up and use it for all DB connections
+      # Standard Prisma/Next.js URL — makes sure Prisma sees the right creds
       DATABASE_URL: postgres://spliit:UmbrelSpliit2025!@db:5432/spliit
+      # (Retained for backwards compatibility with the crazymax image)
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: spliit
+      POSTGRES_USER: spliit
+      POSTGRES_PASSWORD: UmbrelSpliit2025!
 
   db:
     image: postgres:15-alpine
