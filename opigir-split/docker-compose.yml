@@ -1,0 +1,47 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # mystore-spliit_web_1
+      APP_HOST: opigir-spliit_web_1
+      APP_PORT: 3000
+
+  web:
+    image: crazymax/spliit:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/uploads:/uploads
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: spliit
+      POSTGRES_DB: spliit
+      POSTGRES_PASSWORD: ${APP_PASSWORD}
+      DATABASE_URL: postgresql://spliit:${APP_PASSWORD}@db:5432/spliit
+      # Uncomment and configure for S3 receipt storage:
+      # NEXT_PUBLIC_ENABLE_EXPENSE_DOCUMENTS: "true"
+      # S3_UPLOAD_KEY: your_s3_access_key
+      # S3_UPLOAD_SECRET: your_s3_secret_key
+      # S3_UPLOAD_BUCKET: your_s3_bucket_name
+      # S3_UPLOAD_REGION: us-east-1
+      # S3_UPLOAD_ENDPOINT: https://s3.amazonaws.com
+      # Uncomment and configure for OpenAI features:
+      # NEXT_PUBLIC_ENABLE_RECEIPT_EXTRACT: "true"
+      # NEXT_PUBLIC_ENABLE_CATEGORY_EXTRACT: "true"
+      # OPENAI_API_KEY: your_openai_api_key
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: spliit
+      POSTGRES_DB: spliit
+      POSTGRES_PASSWORD: ${APP_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
