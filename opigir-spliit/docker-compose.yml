@@ -16,7 +16,7 @@ services:
       POSTGRES_USER: spliit
       POSTGRES_DB: spliit
       POSTGRES_PASSWORD: ${APP_PASSWORD}
-      DATABASE_URL: postgresql://spliit:${APP_PASSWORD}@db:5432/spliit
+      DATABASE_URL: postgresql://postgres:${APP_PASSWORD}@db:5432/spliit
     depends_on:
       - db
 
@@ -30,4 +30,3 @@ services:
       POSTGRES_USER: spliit
       POSTGRES_DB: spliit
       POSTGRES_PASSWORD: ${APP_PASSWORD}
-      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256 --auth-local=trust"
