@@ -16,9 +16,8 @@ services:
       POSTGRES_PORT: 5432
       POSTGRES_USER: spliit
       POSTGRES_DB: spliit
-      POSTGRES_PASSWORD: UmbrelSpliit2025!
       POSTGRES_TIMEOUT: 60
-      DATABASE_URL: postgresql://spliit:UmbrelSpliit2025!@db:5432/spliit
+      DATABASE_URL: postgresql://spliit@db:5432/spliit
     depends_on:
       - db
 
@@ -31,4 +30,4 @@ services:
     environment:
       POSTGRES_USER: spliit
       POSTGRES_DB: spliit
-      POSTGRES_PASSWORD: UmbrelSpliit2025!
+      POSTGRES_HOST_AUTH_METHOD: trust
