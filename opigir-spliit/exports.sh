@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate secure password for database if not set
-export APP_PASSWORD="${APP_PASSWORD:-$(openssl rand -hex 16)}"
+export APP_PASSWORD="spliit"
 
 # Default port
 export APP_PORT="3000"

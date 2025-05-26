@@ -30,4 +30,4 @@ services:
       POSTGRES_USER: spliit
       POSTGRES_DB: spliit
       POSTGRES_PASSWORD: ${APP_PASSWORD}
-      POSTGRES_INITDB_ARGS: "--auth-host=md5 --auth-local=trust"
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256 --auth-local=trust"
