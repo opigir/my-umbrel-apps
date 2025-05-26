@@ -22,14 +22,14 @@ description: >-
   
   • No account required - just share the group link
   
-  • Upload receipt images (requires S3 configuration)
+  • Upload receipt images (stored locally on your Umbrel)
   
-  • AI receipt scanning (requires OpenAI API key)
+  • No external S3 setup required - everything stored on your node
 releaseNotes: >-
   First release of Spliit for Umbrel. This expense sharing app lets you track and split bills with friends and family without requiring accounts.
   
   
-  To enable advanced features like receipt uploads and AI scanning, you'll need to configure S3 storage and OpenAI API keys by editing the docker-compose.yml file after installation.
+  Receipt uploads are enabled and files are stored locally on your Umbrel node. No external cloud storage required!
 developer: Spliit Team
 website: https://spliit.app
 dependencies: []

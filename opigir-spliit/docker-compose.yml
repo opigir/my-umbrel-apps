@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      # mystore-spliit_web_1
+      # opigir-spliit_web_1
       APP_HOST: opigir-spliit_web_1
       APP_PORT: 3000
 
@@ -20,17 +20,14 @@ services:
       POSTGRES_DB: spliit
       POSTGRES_PASSWORD: ${APP_PASSWORD}
       DATABASE_URL: postgresql://spliit:${APP_PASSWORD}@db:5432/spliit
-      # Uncomment and configure for S3 receipt storage:
-      # NEXT_PUBLIC_ENABLE_EXPENSE_DOCUMENTS: "true"
-      # S3_UPLOAD_KEY: your_s3_access_key
-      # S3_UPLOAD_SECRET: your_s3_secret_key
-      # S3_UPLOAD_BUCKET: your_s3_bucket_name
-      # S3_UPLOAD_REGION: us-east-1
-      # S3_UPLOAD_ENDPOINT: https://s3.amazonaws.com
-      # Uncomment and configure for OpenAI features:
+      # Enable local file uploads (no S3 needed)
+      NEXT_PUBLIC_ENABLE_EXPENSE_DOCUMENTS: "true"
+      # Optional: Specify local upload path
+      UPLOAD_PATH: "/uploads"
+      # Optional: Enable AI features with OpenAI (uncomment and add your API key)
       # NEXT_PUBLIC_ENABLE_RECEIPT_EXTRACT: "true"
       # NEXT_PUBLIC_ENABLE_CATEGORY_EXTRACT: "true"
-      # OPENAI_API_KEY: your_openai_api_key
+      # OPENAI_API_KEY: your_openai_api_key_here
     depends_on:
       - db
 
