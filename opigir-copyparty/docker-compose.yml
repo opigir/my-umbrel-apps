@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: opigir-copyparty_server_1
+      APP_PORT: 3923
+
+  server:
+    image: copyparty/ac:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data:/w
+      - ${APP_DATA_DIR}/config:/cfg
+    environment:
+      TZ: UTC
+    user: "1000:1000"

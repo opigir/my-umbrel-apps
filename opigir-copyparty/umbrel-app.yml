@@ -1,0 +1,43 @@
+manifestVersion: 1.1
+id: opigir-copyparty
+category: files
+name: CopyParty
+version: "1.0.0"
+tagline: Portable file server with resumable uploads and media indexing
+icon: https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-copyparty/logo.svg
+description: >-
+  CopyParty is a portable file server with accelerated resumable uploads, deduplication, and media indexing capabilities.
+
+  Features:
+
+  • Multiprotocol support (HTTP, WebDAV, FTP, TFTP)
+
+  • Resumable uploads with no file size limit
+
+  • Built-in media player and indexer
+
+  • Thumbnail generation for images and videos
+
+  • Cross-platform file sharing
+
+  • User accounts and permissions
+
+  • File search and QR code generation
+
+  • Zero-configuration file server
+
+developer: Ed
+website: https://github.com/9001/copyparty
+dependencies: []
+repo: https://github.com/9001/copyparty
+support: https://github.com/9001/copyparty/discussions
+port: 3923
+gallery:
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-copyparty/1.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-copyparty/2.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-copyparty/3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Community
+submission: https://github.com/getumbrel/umbrel-apps
