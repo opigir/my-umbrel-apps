@@ -13,6 +13,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/w
       - ${APP_DATA_DIR}/config:/cfg
+      - ./config.conf:/cfg/config.conf:ro
     environment:
       TZ: UTC
     user: "1000:1000"
