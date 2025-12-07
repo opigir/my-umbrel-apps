@@ -1,0 +1,40 @@
+manifestVersion: 1.1
+id: opigir-byparr
+category: automation
+name: Byparr
+version: "1.0.0"
+tagline: Anti-bot protection bypass tool with FlareSolverr API compatibility
+icon: https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-byparr/logo.svg
+description: >-
+  Byparr is an open-source tool that helps bypass anti-bot protections on websites by mimicking FlareSolverr's API.
+
+  Features:
+
+  • FlareSolverr API compatibility
+
+  • HTTP cookies and headers extraction
+
+  • Anti-bot challenge bypass capabilities
+
+  • Built with camoufox and FastAPI
+
+  • REST API with documentation
+
+  • Proxy support for enhanced functionality
+
+  • Lightweight and containerized deployment
+
+developer: ThePhaseless
+website: https://github.com/ThePhaseless/Byparr
+dependencies: []
+repo: https://github.com/ThePhaseless/Byparr
+support: https://github.com/ThePhaseless/Byparr/issues
+port: 8191
+gallery:
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-byparr/1.jpg
+  - https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-byparr/2.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Community
+submission: https://github.com/getumbrel/umbrel-apps

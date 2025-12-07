@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="byparrGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#byparrGradient)"/>
+  <g transform="translate(12, 12)">
+    <path d="M20 4C26.627 4 32 9.373 32 16C32 22.627 26.627 28 20 28C13.373 28 8 22.627 8 16C8 9.373 13.373 4 20 4ZM20 8C15.582 8 12 11.582 12 16C12 20.418 15.582 24 20 24C24.418 24 28 20.418 28 16C28 11.582 24.418 8 20 8Z" fill="white"/>
+    <path d="M20 12C22.209 12 24 13.791 24 16C24 18.209 22.209 20 20 20C17.791 20 16 18.209 16 16C16 13.791 17.791 12 20 12Z" fill="white"/>
+    <path d="M4 36L36 36L36 32L4 32Z" fill="white"/>
+  </g>
+</svg>
