@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: opigir-copyparty
 category: files
 name: CopyParty
-version: "1.0.1"
+version: "1.0.2"
 tagline: Portable file server with resumable uploads and media indexing
 icon: https://raw.githubusercontent.com/opigir/my-umbrel-apps/refs/heads/master/opigir-copyparty/logo.svg
 description: >-
