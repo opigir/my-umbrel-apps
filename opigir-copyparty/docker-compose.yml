@@ -11,9 +11,8 @@ services:
     restart: on-failure
     stop_grace_period: 15s
     volumes:
-      - /home/umbrel:/w
-      - ${APP_DATA_DIR}/config:/cfg
-      - ./config.conf:/cfg/config.conf:ro
+      - /home/umbrel:/w:z
+      - ${APP_DATA_DIR}:/cfg:z
     environment:
       TZ: UTC
       PYTHONUNBUFFERED: 1
